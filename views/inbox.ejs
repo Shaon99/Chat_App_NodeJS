@@ -101,7 +101,7 @@
 
           if(data.message.attachment && data.message.attachment.length > 0) {
             data.message.attachment.forEach(attachment => {
-              attachments += `<img src="./uploads/attachments/${attachment}" /> `;
+              attachments += `<img style="height:150px; width:150px; padding:2px;" src="./uploads/attachments/${attachment}" /> `;
             });
           }
 
@@ -112,14 +112,14 @@
           // do not show avatar for loggedin user
           if(data.message.sender.id == loggedinUserId) {
             messageHTML = `<div class="message-row ${messageClass}"><div class="message-content">
-              <div class="message-text">${data.message.message}</div>
+              <div  class="message-text">${data.message.message}</div>
               ${attachments}
               <div class="message-time">${moment(data.message.date_time).fromNow()}</div>
             </div></div>`;
           } else {
             messageHTML = `<div class="message-row ${messageClass}"><div class="message-content">
               ${senderAvatar}
-              <div class="message-text">${data.message.message}</div>
+              <div style="height:60px;" class="message-text">${data.message.message}</div>
               ${attachments}
               <div class="message-time">${moment(data.message.date_time).fromNow()}</div>
             </div></div>`;
@@ -166,7 +166,7 @@
 
                   if(message.attachment && message.attachment.length > 0) {
                     message.attachment.forEach(attachment => {
-                      attachments += `<img style="height:80px;width:80px; padding:10px;" src="./uploads/attachments/${attachment}" /> `;
+                      attachments += `<img style="height:150px; width:150px; padding:2px;" src="./uploads/attachments/${attachment}" /> `;
                     });
                   }
 
@@ -175,7 +175,7 @@
                   // final message html
                   let messageHTML = `<div class="message-row ${messageClass}"><div class="message-content">
                       ${showAvatar}
-                      <div class="message-text">${message.text}</div>
+                      <div style="height:60px;" class="message-text">${message.text}</div>
                       ${attachments}
                       <div class="message-time">${moment(message.date_time).fromNow()}</div>
                     </div></div>

@@ -480,9 +480,17 @@ input[type="submit"]:active {
 }
 
 .message-row img:first-of-type {
-  border-radius: 100%;
   grid-row: span 2;
 }
+.message-row img:hover{
+transform: scale(1.4);
+  width:200px;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 5%;
+  border: none;
+}
+
 
 .message-text {
   padding: 9px 14px;
@@ -724,7 +732,7 @@ font-size: 12px;
 }
 
 #users-table tbody tr:hover {
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
   cursor: pointer;
 }
 
@@ -746,11 +754,21 @@ font-size: 12px;
 }
 
 #users-table tbody .name img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
+  width:70px;
+  height: 80px;
+  border-radius: 10%;
   border: 2px solid var(--blue);
 }
+
+#users-table tbody .name img:hover {
+  transform: scale(1.4);
+  width:200px;
+  height: 150px;
+  cursor: pointer;
+  border-radius: 5%;
+  border: none;
+}
+
 
 #users-table tbody .name span {
   font-weight: 600;
